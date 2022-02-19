@@ -1,8 +1,0 @@
-bash
-c#
-c++
-css
-internet
-java
-pyton
-unix
