@@ -1,0 +1,46 @@
+1  # Navegue até a raiz do projeto com o arquivo .txt;
+2  cd /
+3  #
+4  # Verifique se não existe nada sem "commitar" utilizando git status :
+5  git status
+6  #
+7  # Crie uma nova branch com o nome trybe-skills-changes e faça checkout nela;
+8  git branch trybe-skills-changes
+9  git checkout trybe-skills-changes
+10 #
+11 # No arquivo .txt , ao final da lista de habilidades , adicione mais duas habilidades que serão desenvolvidas na Trybe:
+12 cat >> trybe-skills.txt 
+   - HTML
+   - CSS
+   ^C
+13 # Faça um git add nome-do-arquivo.extensao
+14 git add trybe-skills2.txt
+15 #
+16 # Agora um git commit -m "Mensagem que você gostaria"
+17 git commit -m "inclusão de skill no trybe-skills2.txt, modulo 1, bloco 2, aula 2"
+18 #
+19 # E por último um git push -u origin trybe-skills-changes
+20 git push -u origin trybe-skills-changes
+21 #
+22 # Abra um Pull Request com uma descrição detalhada:
+23 #
+24 # Retorne para a branch principal, master , com o comando: git checkout master ;
+25 git chekout master
+26 #
+27 # Verifique que você está na branch master , com o comando: git branch
+28 git branch
+29 #
+30 # Crie uma nova branch trybe-skills-updates a partir da master e faça checkout nela;
+31 git branch trybe-skills-updates
+32 git checkout trybe-skills-updates
+33 #
+34 #No mesmo arquivo .txt que você modificou no passo 4 , também ao final da sua lista de habilidades, adicione mais um aprendizado que você terá nos próximos blocos:
+35 cat >> trybe-skills2.txt 
+   - React
+   ^C
+36 git add trybe-skills2.txt
+37 git commit -m "Adiciona react ao arquivo trybe-skills2.txt"
+38 git push -u origin trybe-skills-updates
+39 #
+40 # Agora, faça o merge das branches trybe-skills-changes e trybe-skills-updates na branch master , através do Pull Request :
+
