@@ -2,3 +2,7 @@
 - Bash
 - Git
 - React
+- HTML
+- CSS
+- Javascript
+
