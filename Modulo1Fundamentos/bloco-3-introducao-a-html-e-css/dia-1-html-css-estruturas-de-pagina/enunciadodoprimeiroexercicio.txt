@@ -1,0 +1,32 @@
+# Parte 1
+1 - Crie uma lista das pessoas que você já fez amizade na Trybe.
+2 - Adicione uma imagem que venha de uma URL externa.
+
+# Parte 2
+1 - Crie um parágrafo para cada pessoa da sua lista.
+2 - Crie um link entre a sua lista e os parágrafos de pessoas.
+3 - Crie um link para a página do Google.
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Amizades na Tyrbe</title>
+  </head>
+  <body>
+    <h1>Pessoas que já tive contato e fiz amizade na trybe</h1>
+    <ul>
+      <li><a href="#jm">Jéssica Milene</a></li>
+      <li><a href="#lf">Luiz Felipe</a></li>
+      <li><a href="#rp">Ranner de Paula</a></li>
+      <li><a href="#ck">Carolina Kauark</a></li>
+    </ul>
+    <p id="jm"></p>Parágrafo da Jéssica Milene.</p>
+    <p id="lf"></p>Parágrafo do Luiz Felipe.</p>
+    <p id="rp"></p>Parágrafo da Ranner de Paula.</p>
+    <p id="ck"></p>Parágrafo da Carolina Kauark.</p>
+    <img src="http://bennett.br/pastoral-escolar/prapensar/aspectos-de-amizade/@@images/2e7b5b29-5d4d-4d41-93ee-87bd88ff6405.jpeg">
+    <a href="https://www.google.com/" target="_blank">Página do Google.</a>
+  </body>
+</html>
