@@ -1,0 +1,63 @@
+div:hover {
+    border: 5px outset;
+}
+
+.corprimaria {
+    
+    border: 5px solid yellow;
+    color: ;
+}
+
+.corsecundaria {
+    border: 5px solid green;
+    color: ;
+}
+
+.corcomplementar {
+    border: 5px solid orange;
+    color: ;
+}
+
+.corescura {
+    border: 5px solid black;
+    color: ;
+}
+
+.corclara {
+    border: 5px solid grey;
+    color: ;
+}
+
+.estilizaçãoh31 {
+    font-family: monospace;
+    color: chocolate;
+    background-color: darkslategrey;
+    font-style: italic;
+}
+
+.estilizaçãoh32 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: bisque;
+    background-color: rgb(50, 66, 66);
+}
+
+.estilizaçãoh33 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blue;
+    background-color: rgb(48, 49, 49);
+    font-style: italic;
+    font-size: 2em;
+}
+
+.estilizaçãoh34 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: brown;
+    background-color: chartreuse;
+}
+
+.estilizaçãoh35 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: darkgoldenrod;
+    background-color: black;
+    font-style: italic;
+}
