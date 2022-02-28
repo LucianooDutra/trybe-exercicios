@@ -1,7 +1,80 @@
-h3:hover {
-    border-width: 10px;
+ol {
+    background-color: yellow;
 }
 
-h3:hover {
-    border-color: aqua;
+.olimpar {
+    text-transform: uppercase;
 }
+
+.olpar {
+    color: green;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: red;
+}
+
+.tituloitalico {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+li {
+    font-size: 20px;
+}
+
+.liitalico {
+    font-weight: bold;
+}
+
+.corazul {
+    color: blue;
+}
+
+.corrosa {
+    color: pink;
+}
+
+li:hover{
+    font-weight: bold;
+}
+
+div:nth-of-type(1) {
+   color: orange;
+  }
+  
+  div:nth-of-type(2) {
+    color: green;
+  }
+  
+  div:nth-of-type(3) {
+    color: black;
+  }
+  
+  div:nth-of-type(4) {
+    color: yellow;
+  }
+  
+  div:nth-of-type(5) {
+    color: green;
+  }
+
+  .corletra1 {
+      color: orange;
+  }
+
+  .corletra2 {
+      color: green;
+  }
+
+  .corletra3 {
+      color: black;
+  }
+
+  .corletra4 {
+      color: yellow;
+  }
+
+  .corletra5 {
+      color: green;
+  }
