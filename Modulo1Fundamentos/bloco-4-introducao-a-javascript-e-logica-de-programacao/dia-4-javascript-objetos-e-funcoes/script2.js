@@ -128,24 +128,6 @@
 
 
 
-// function somatorio(numero) {
-
-
-//     let resultado = 0;
-//     let indice = '';
-
-//     for (let index = 1; index <= numero; index += 1) {
-
-//             resultado =+ resultado + [index];
-//             indice = index;
-        
-//     }
-
-//     return resultado;
-
-// }
-
-// console.log(somatorio([5]));
 
 
 
