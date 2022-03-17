@@ -26,16 +26,22 @@ const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 
 
 function criacaoDias() {
 
+    // como minha ul ja esta criada no html, so pego o id days que esta dentro dela pra armazenar todas minhas li no final
+
     let listaDias = document.querySelector('#days');
 
+    // percorrer todos os elementos da array e adicionar em outra variável separada
     for (let i = 0; i < dezDaysList.length; i += 1) {
         let resultadoDaLista = dezDaysList[i];
 
         let dia = document.createElement('li');
 
         if (resultadoDaLista === 24 | resultadoDaLista === 31) {
+            // primeiro acrescentar a classe da li
             dia.className = 'day holiday';
+            // segundo acrescentar o mesmo texto que foi percorrido pelo for na li
             dia.innerHTML = resultadoDaLista;
+            // terceiro adicionar a li dentro do caminha que contém o id days
             listaDias.appendChild(dia);
         }
         else if (resultadoDaLista === 4 | resultadoDaLista === 11 | resultadoDaLista === 18) {
@@ -73,9 +79,10 @@ function botaoFeriados(valor) {
     // Criar o botão usando o 'button', se fosse um paragrafo seria 'p'
     let feriadosdois = document.createElement('button');
 
-    // Criar a variavel que guardará a string do botão
+    // Criar a variavel que guardará o id do botão
     let feriadosID = 'btn-holiday';
 
+    // configurar meu botão
     // O nome do botão será o parametro recebido dentro da função, no caso 'feriados'
     feriadosdois.innerHTML = valor;
 
@@ -124,18 +131,74 @@ funcaoUm();
 // Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
 
 
+// mesmo passo a passo do exercicio 2
+
+function criarBotaoSextaFeira(valor) {
+    let caminhoFinal = document.querySelector('.buttons-container');
+    let botaoinicial = document.createElement('button');
+    let IDSextaFeira = 'btn-friday';
+
+    botaoinicial.innerHTML = valor;
+    botaoinicial.id = IDSextaFeira;
+    caminhoFinal.appendChild(botaoinicial);
+};
+
+criarBotaoSextaFeira('Sexta-feira');
+
 
 // Exercício 5:
 // Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
 
 
+function sextaras(valor) {
+
+    let caminhoFinal = document.querySelector('#btn-friday');
+    let diasSexta = document.querySelectorAll('.friday');
+    let texto = 'sextar!! o/';
+
+
+    caminhoFinal.addEventListener('click', function () {
+        for (let i = 0; i < diasSexta.length; i += 1) {
+
+            if (diasSexta[i].innerHTML !== texto) {
+                diasSexta[i].innerHTML = texto;
+            }
+            else {
+                diasSexta[i].innerHTML = valor[i];
+            }
+        }
+    })
+};
+let sextas = [4, 11, 18, 25];
+sextaras(sextas);
 
 
 // Exercício 6:
 // Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
 // Dica - Propriedade: event.target .
 
+function aumentarZoomm() {
+
+    let days = document.querySelector('#days');
+
+    days.addEventListener('mouseover', function(event) {
+        event.target.style.fontsize = '30px';
+        event.target.style.fontweight = '600';
+    })
+};
+
+function diminuirZoom() {
+    let days = document.querySelector('#days');
+
+    days.addEventListener('mouseout', function(event) {
+        event.target.style.fontweight = '200';
+        event.target.style.fontsize = '20px';
+    })
+};
+
+aumentarZoomm();
+diminuirZoom();
 
 
 
