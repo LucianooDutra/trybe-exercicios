@@ -108,7 +108,7 @@ function funcaoUm() {
     let localBotaoGeral = document.querySelector('#btn-holiday');
     let botaoFeriadoMudaCor = document.querySelectorAll('.holiday');
     let novaCor = 'rgb(238,238,238)';
-    let antigaCor = 'white';
+    let antigaCor = 'green';
 
 
     localBotaoGeral.addEventListener('click', function () {
@@ -182,18 +182,18 @@ function aumentarZoomm() {
 
     let days = document.querySelector('#days');
 
-    days.addEventListener('mouseover', function(event) {
-        event.target.style.fontsize = '30px';
-        event.target.style.fontweight = '600';
+    days.addEventListener('mouseover', function (event) {
+        event.target.style.fontSize = '30px';
+        event.target.style.fontWeight = '600';
     })
 };
 
 function diminuirZoom() {
     let days = document.querySelector('#days');
 
-    days.addEventListener('mouseout', function(event) {
-        event.target.style.fontweight = '200';
-        event.target.style.fontsize = '20px';
+    days.addEventListener('mouseout', function (event) {
+        event.target.style.fontWeight = '200';
+        event.target.style.fontSize = '20px';
     })
 };
 
@@ -207,6 +207,19 @@ diminuirZoom();
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
 
 
+function adicionaTarefa(event) {
+
+    let localFinal = document.querySelector('.my-tasks');
+    let tarefa = document.createElement('span');
+
+    tarefa.innerHTML = event;
+
+    localFinal.appendChild(tarefa);
+};
+
+adicionaTarefa('Estudar');
+
+
 
 
 // Exercício 8:
@@ -215,11 +228,43 @@ diminuirZoom();
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
 
 
+function legendaCor(cor) {
+
+    let localFinal = document.querySelector('.my-tasks');
+    let criarelement = document.createElement('div');
+    let legendaClasse = 'task';
+
+criarelement.className = legendaClasse;
+criarelement.style.backgroundColor = cor;
+localFinal.appendChild(criarelement);
+
+};
+
+legendaCor('orange');
+
 
 
 // Exercício 9:
 // Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
 // Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
+
+function selecionarTarefa () {
+
+    let caminhoFinal = document.getElementsByClassName('task selected');
+    let caminhoTask = document.querySelector('.task');
+
+    caminhoTask.addEventListener ('click', function(valor){
+
+        if (caminhoFinal.length === 0) {
+            valor.target.className = 'task selected';
+        }
+        else {
+            valor.target.className = 'task';
+        }
+    });
+};
+
+selecionarTarefa();
 
 
 
@@ -227,6 +272,25 @@ diminuirZoom();
 // Exercício 10:
 // Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
 // Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) .
+
+function legendaDoEvento() {
+    let caminhoFinal = document.getElementsByClassName('task selected');
+    let idDays = document.querySelector('#days');
+    let classeTask = document.querySelector('.task');
+    let corDeTask = classeTask.style.backgroundColor;
+    
+    idDays.addEventListener('click', function(event){
+      let eventTargetColor = event.target.style.color;
+      if (caminhoFinal.length > 0 && eventTargetColor !== corDeTask) {
+        let color = caminhoFinal[0].style.backgroundColor;
+        event.target.style.color = color;
+      } else if (eventTargetColor === corDeTask && caminhoFinal.length !== 0) {
+        event.target.style.color = 'rgb(119,119,119)';
+      }
+    });
+  };
+  
+  legendaDoEvento();
 
 
 
@@ -236,6 +300,38 @@ diminuirZoom();
 // Se nenhum caractere for inserido no campo input , a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
 // Ao pressionar a tecla "enter" o evento também deverá ser disparado.
 // Dica - Propriedade: key .
+
+
+function addNewTask() {
+    let getInputField = document.querySelector('#task-input');
+    let addInputButton = document.querySelector('#btn-add');
+    let getTaskList = document.querySelector('.task-list');
+  
+    addInputButton.addEventListener('click', function() {
+      if (getInputField.value.length > 0) {
+        let newLi = document.createElement('li');
+        newLi.innerText = getInputField.value;
+  
+        getTaskList.appendChild(newLi);
+        getInputField.value = '';
+      } else {
+        alert('Error: Digite ao menos 1 caractere.');
+      }
+    })
+  
+    getInputField.addEventListener('keyup', function(event) {
+      if (event.key === 'Enter' && getInputField.value.length > 0) {
+        let newLi = document.createElement('li');
+        newLi.innerText = getInputField.value;
+  
+        getTaskList.appendChild(newLi);
+        getInputField.value = '';
+      }
+    });
+  };
+  
+  addNewTask();
+
 
 
 
