@@ -1,42 +1,98 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
 body {
-    padding: 30px;
-    background-color: #A2DEBD;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 80% auto;
+  background-color: #a2debd;
+  color: rgb(53, 53, 53);
 }
 
-h1{
-padding-bottom: 30px;
-text-align: center;
+header,
+form {
+  background-color: #428f6f;
+  box-shadow: 10px 5px 15px grey;
+  padding: 20px;
+  border-radius: 5px;
 }
 
-.formulario {
-padding: 15px;
-border: 3px solid black;
-background-color: #428F6F;
+.container {
+  margin: 30px auto;
 }
 
-.itens {
-    padding: 10px;
+.caixaDeTexto {
+  background-color: rgb(246, 247, 248);
+}
+
+.data {
+  background-color: #a2debd;
 }
 
 button {
-    font-weight: bold;
-    padding: 7px 10px;
-    font-size: 15px;
-    background-color: #2D5340;
-    color: white;
-    border-radius: 5px;
-    border: none;
+  font-weight: bold;
+  padding: 10px 40px;
+  font-size: 15px;
+  background-color: #2d5340;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
+/* quando passa o cursor do mouse sobre o botão ele muda de cor */
+button:hover {
+  background-color: #3d705b;
+}
 
-/* A classe mb-3 significa a margin boton de 3 */
+/* quando retira o cursor do mouse de cima do botão ele muda de cor, no caso coloquei a mesma cor original de quando abre a pag */
+button:active {
+  background-color: #2d5340;
+}
+
+/* * {
+    padding: 0;
+    margin: 0;
+  } */
+
+/* body { */
+/* padding: 30px; */
+/* background-color: #a2debd; */
+/* font-family: Arial, Helvetica, sans-serif; */
+/* width: 80% auto; */
+/* } */
+
+/* h1 {
+    padding-bottom: 30px;
+    text-align: center;
+    font-style: italic;
+  } */
+
+/* .formulario {
+    padding: 40px;
+    border: 2px solid #2d5340;
+    border-radius: 5px;
+    background-color: #428f6f;
+    box-shadow: 10px 5px 15px gray;
+  } */
+
+/* .itens {
+    padding-top: 25px;
+  } */
+
+/* .itens2 {
+    padding-top: 10px;
+  } */
+
+/* .formulario input[type="text"],
+  textarea {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(214, 217, 220);
+    border-radius: 3px;
+    width: 50%;
+    padding: 7px;
+    font-size: 14px;
+  } */
+
+/* .numeroCaracter {
+    color: rgb(63, 63, 63);
+  } */
+
+/* A classe mb-3 significa a margin boton de 3
 
 /* é a caixinha com sobreamento*/
 /* box-shadow : 10px 5px 15px rgb(203, 205, 115); */
