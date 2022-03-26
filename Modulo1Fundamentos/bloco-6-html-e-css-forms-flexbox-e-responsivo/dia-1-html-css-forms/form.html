@@ -19,13 +19,13 @@
                     <div class="itens">
                         <label for="digite-nome">Nome: </label>
                         <br>
-                        <input type="text" value="" id="digite-nome" name="cadastro" required maxlength="100"
+                        <input type="text" value="" id="digite-nome" name="cadastro" required minlength="10" maxlength="40"
                             placeholder="digite seu nome completo">
                     </div>
                     <div class="itens">
                         <label for="digite-email">Email: </label>
                         <br>
-                        <input type="text" value="" id="digite-email" name="cadastro" required maxlength="50"
+                        <input type="text" value="" id="digite-email" name="cadastro" required minlength="10" maxlength="50"
                             placeholder="digite seu email">
                     </div>
                     <div class="itens">
@@ -44,20 +44,19 @@
                         </div>
                     </div>
                     <div class="itens">
-                        <div class="itens">
-                            <span>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</span>
+                        <div class="">
+                            <label for="textoarea">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
+                                TrybeTrip?</label>
                         </div>
-                        <div class="itens">
-                            <textarea class="" name="" id="" cols="40" rows="10" maxlength="500"></textarea>
+                        <div class="itens2">
+                            <textarea class="" name="" id="textoarea" cols="40" rows="10" maxlength="500"></textarea>
                             <br>
                             <span class="numeroCaracter"> Descreva em 500 palavras ou menos</span>
-                            <br>
-                            <button type="submit" value="" id="enviar" name="enviar">Enviar</button>
                         </div>
                     </div>
                     <div class="itens">
                         <label for="data">Qual a melhor data para realizar sua viagem?</label>
-                        <div class="itens">
+                        <div class="itens2">
                             <span>Data: </span>
                             <input type="date" value="" id="data" name="data">
                         </div>
@@ -71,6 +70,10 @@
                         <input type="checkbox" value="" id="imagem" name="oportunidade" checked>
                         <label for="imagem">Concordo que imagens
                             das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+                    </div>
+                    <div class="itens">
+                        <button type="submit" value="" id="enviar" name="enviar">Enviar</button>
+                        <button type="reset" value="" id="limpar" name="limpar">Limpar</button>
                     </div>
                 </div>
             </form>
