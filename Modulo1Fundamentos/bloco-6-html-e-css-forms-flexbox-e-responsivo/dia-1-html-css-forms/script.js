@@ -1,9 +1,5 @@
-const localbotoes = document.querySelector('#botoes');
+const localBotao = document.querySelector('#enviar');
 
-function criarButtonEnviar() {
-    const criacaoEnviar = document.createElement('button');
-    criacaoEnviar.classList = 'botoesnovo';
-criacaoEnviar.innerHTML= 'Enviar';
-    localbotoes.appendChild(criacaoEnviar);
-  }
-  criarButtonEnviar();
+localBotao.addEventListener('click', (event) => {
+    event.preventDefault();
+})

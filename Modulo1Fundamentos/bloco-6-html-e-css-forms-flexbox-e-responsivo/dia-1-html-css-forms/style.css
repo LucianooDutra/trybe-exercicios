@@ -13,6 +13,7 @@ body {
 h1 {
   padding-bottom: 30px;
   text-align: center;
+  font-style: italic;
 }
 
 .formulario {
@@ -24,7 +25,11 @@ h1 {
 }
 
 .itens {
-  padding-top: 20px;
+  padding-top: 25px;
+}
+
+.itens2 {
+  padding-top: 10px;
 }
 
 .formulario input[type="text"],
@@ -39,12 +44,23 @@ textarea {
 
 button {
   font-weight: bold;
-  padding: 7px 10px;
+  padding: 10px 40px;
   font-size: 15px;
   background-color: #2d5340;
   color: white;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
+}
+
+/* quando passa o cursor do mouse sobre o botão ele muda de cor */
+button:hover {
+  background-color: #3d705b;
+}
+
+/* quando retira o cursor do mouse de cima do botão ele muda de cor, no caso coloquei a mesma cor original de quando abre a pag */
+button:active {
+  background-color: #2d5340;
 }
 
 .numeroCaracter {
