@@ -8,6 +8,7 @@ html {
   box-sizing: inherit;
 }
 
+/* Tela pequena, até 600px*/
 body {
   font-size: 20px;
   margin-left: 15px;
@@ -50,6 +51,7 @@ main {
 section {
 }
 
+/* Tela média, de 600px até 1300px */
 @media screen and (max-width: 1300px) and (min-width: 600px) {
   body {
     font-size: 22px;
@@ -96,6 +98,7 @@ section {
   }
 }
 
+/* Tela grande, apartir de 1300px */
 @media screen and (min-width: 1300px) {
   body {
     font-size: 22px;
