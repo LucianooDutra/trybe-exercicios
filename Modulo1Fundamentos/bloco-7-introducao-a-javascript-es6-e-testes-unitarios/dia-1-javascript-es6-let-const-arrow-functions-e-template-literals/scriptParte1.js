@@ -16,8 +16,6 @@ const testingScope = (escopo) => {
 
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
-// Seu código aqui.
-
 const ordemCrescente = () => {
   oddsAndEvens[0] = 2;
   oddsAndEvens[1] = 3;
@@ -32,3 +30,17 @@ const ordemCrescente = () => {
 let result = ordemCrescente();
 
 // console.log(`Os números ${result} se encontram ordenados de forma crescente!`);
+
+// Item 2 com sort
+
+const sortArrayBonus = array => {
+  const sortOddsAndEvens = array.sort((a, b) => a - b);
+  return sortOddsAndEvens;
+}
+
+const sortedArrayBonus = sortArrayBonus(oddsAndEvens);
+
+console.log(`Os números ${sortedArrayBonus} se encontram ordenados de forma crescente !`);
+
+// Única linha
+console.log(`Os números ${oddsAndEvens.sort((a,b) => a - b)} se encontram ordenados de forma crescente !`);
