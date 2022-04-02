@@ -13,7 +13,7 @@ resultado *= i;
 // item 2
 
 const maiorPalavra = (frase) => {
-    let palavras = frase.split(' ');
+    let palavras = frase.split(' '); // .split ele separa as palavras dentro de um array, e retorna um novo array onde cada palavra será uma string separada
     let maiorPalavra = 0;
     let resultado = '';
 
@@ -27,7 +27,3 @@ const maiorPalavra = (frase) => {
 }
 
 // console.log(maiorPalavra("Antonio foi no banheiro e não sabemos o que aconteceu"));
-
-
-// Item 3
-

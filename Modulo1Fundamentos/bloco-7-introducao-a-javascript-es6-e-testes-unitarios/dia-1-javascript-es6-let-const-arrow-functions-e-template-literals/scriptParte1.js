@@ -33,14 +33,18 @@ let result = ordemCrescente();
 
 // Item 2 com sort
 
-const sortArrayBonus = array => {
+const sortArrayBonus = (array) => {
   const sortOddsAndEvens = array.sort((a, b) => a - b);
   return sortOddsAndEvens;
-}
+};
 
 const sortedArrayBonus = sortArrayBonus(oddsAndEvens);
 
 console.log(`Os números ${sortedArrayBonus} se encontram ordenados de forma crescente !`);
 
 // Única linha
-console.log(`Os números ${oddsAndEvens.sort((a,b) => a - b)} se encontram ordenados de forma crescente !`);
+console.log(
+  `Os números ${oddsAndEvens.sort(
+    (a, b) => a - b
+  )} se encontram ordenados de forma crescente !`
+);
