@@ -143,12 +143,11 @@ function item6() {
 
 // 7
 
-function item7 (objeto, posicao) {
-const primeira = objeto;
-const segunda = posicao;
-const resultado = Object.values(primeira)[segunda];
-console.log(resultado);
-
+function item7(objeto, posicao) {
+  const primeira = objeto;
+  const segunda = posicao;
+  const resultado = Object.values(primeira)[segunda];
+  console.log(resultado);
 }
 
 // item7(lesson1, 1);
@@ -156,11 +155,11 @@ console.log(resultado);
 // 8
 
 const item8 = (objeto, chave, valor) => {
-    const primeira = Object.entries(objeto);
-    let segunda = false;
-    for (let i in primeira) {
-      if (primeira[i][0] === chave && primeira[i][1] === valor) segunda = true;
-    }
-    return segunda;
-  };
-  console.log(item8(lesson2,'professor','Carlos'));
+  const primeira = Object.entries(objeto);
+  let segunda = false;
+  for (let i in primeira) {
+    if (primeira[i][0] === chave && primeira[i][1] === valor) segunda = true;
+  }
+  return segunda;
+};
+console.log(item8(lesson2, "professor", "Carlos"));
