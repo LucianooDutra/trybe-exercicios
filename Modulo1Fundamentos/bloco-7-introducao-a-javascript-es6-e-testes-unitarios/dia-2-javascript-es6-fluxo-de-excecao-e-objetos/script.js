@@ -66,3 +66,100 @@ const orderModifier = () => {
 };
 
 // orderModifier();
+
+// PARTE III
+
+const lesson1 = {
+  materia: "Matemática",
+  numeroEstudantes: 20,
+  professor: "Maria Clara",
+  turno: "manhã",
+};
+
+const lesson2 = {
+  materia: "História",
+  numeroEstudantes: 20,
+  professor: "Carlos",
+};
+
+const lesson3 = {
+  materia: "Matemática",
+  numeroEstudantes: 10,
+  professor: "Maria Clara",
+  turno: "noite",
+};
+
+//   1
+
+function item1() {
+  const mudanca = (lesson2.turno = "noite");
+  console.log(lesson2);
+}
+
+// item1();
+
+// 2
+
+function item2(parametro) {
+  console.log(Object.keys(parametro));
+}
+
+// item2(lesson3);
+
+// 3
+
+function item3(parametro) {
+  console.log(Object.keys(parametro).length);
+}
+
+// item3(lesson1);
+
+// 4
+
+function item4(parametro) {
+  console.log(Object.values(parametro));
+}
+
+// item4(lesson2);
+
+// 5
+
+const allLessons = {};
+Object.assign(allLessons, { lesson1, lesson2, lesson3 });
+// console.log(allLessons);
+
+// 6
+
+function item6() {
+  const primeira = Object.values(lesson1);
+  const segunda = Object.values(lesson2);
+  const terceira = Object.values(lesson3);
+  const total = primeira[1] + segunda[1] + terceira[1];
+
+  console.log(`O número total de estudantes de todas as turmas são ${total}`);
+}
+
+// item6();
+
+// 7
+
+function item7(objeto, posicao) {
+  const primeira = objeto;
+  const segunda = posicao;
+  const resultado = Object.values(primeira)[segunda];
+  console.log(resultado);
+}
+
+// item7(lesson1, 1);
+
+// 8
+
+const item8 = (objeto, chave, valor) => {
+  const primeira = Object.entries(objeto);
+  let segunda = false;
+  for (let i in primeira) {
+    if (primeira[i][0] === chave && primeira[i][1] === valor) segunda = true;
+  }
+  return segunda;
+};
+console.log(item8(lesson2, "professor", "Carlos"));
