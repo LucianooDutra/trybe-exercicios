@@ -1,3 +1,4 @@
+// Item 1
 function sum(a, b) {
   if (typeof a !== "number" || typeof b !== "number") {
     throw new Error("parameters must be numbers");
@@ -6,6 +7,7 @@ function sum(a, b) {
   return a + b;
 }
 
+// Item 2
 function myRemove(arr, item) {
   let newArr = [];
   for (let index = 0; index < arr.length; index += 1) {
@@ -16,6 +18,7 @@ function myRemove(arr, item) {
   return newArr;
 }
 
+// Item 3
 function myFizzBuzz(num) {
   if (typeof num !== "number") return false;
   if (num % 3 === 0 && num % 5 === 0) return "fizzbuzz";
@@ -24,4 +27,45 @@ function myFizzBuzz(num) {
   return num;
 }
 
-module.exports = { sum, myRemove, myFizzBuzz };
+// Item 4
+function mapString(objectMap, string) {
+  const splitString = string.split("");
+  const mappedArray = [];
+
+  for (let index = 0; index < splitString.length; index += 1) {
+    const character = splitString[index];
+    const mappedValue = objectMap[character];
+
+    if (mappedValue) {
+      mappedArray.push(mappedValue);
+    } else {
+      mappedArray.push(character);
+    }
+  }
+
+  return mappedArray.join("");
+}
+
+function encode(string) {
+  const map = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  return mapString(map, string);
+}
+
+function decode(string) {
+  const map = {
+    1: "a",
+    2: "e",
+    3: "i",
+    4: "o",
+    5: "u",
+  };
+  return mapString(map, string);
+}
+
+module.exports = { sum, myRemove, myFizzBuzz, encode, decode };
