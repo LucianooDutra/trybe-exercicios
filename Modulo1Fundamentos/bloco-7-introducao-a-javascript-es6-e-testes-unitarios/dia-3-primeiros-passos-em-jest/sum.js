@@ -70,7 +70,7 @@ function decode(string) {
 
 // Item 5
 const techList = (arrayTechnologies, name) => {
-  if (arrayTechnologies.length === 0) return "Vazio!";
+  if (arrayTechnologies.length === 0) return "Vazio!!";
 
   const sortedArray = arrayTechnologies.sort();
   const technologyList = [];
