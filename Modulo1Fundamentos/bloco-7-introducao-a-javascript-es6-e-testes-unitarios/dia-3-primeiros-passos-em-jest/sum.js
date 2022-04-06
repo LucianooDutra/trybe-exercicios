@@ -68,4 +68,51 @@ function decode(string) {
   return mapString(map, string);
 }
 
-module.exports = { sum, myRemove, myFizzBuzz, encode, decode };
+// Item 5
+const techList = (arrayTechnologies, name) => {
+  if (arrayTechnologies.length === 0) return "Vazio!";
+
+  const sortedArray = arrayTechnologies.sort();
+  const technologyList = [];
+
+  for (let i = 0; i < sortedArray.length; i += 1) {
+    technologyList.push({
+      tech: sortedArray[i],
+      name,
+    });
+  }
+
+  return technologyList;
+};
+
+// Item 6
+const hydrate = (string) => {
+  const splitString = string.split("");
+  let glassesOfWater = 0;
+
+  for (let i = 0; i < splitString.length; i += 1) {
+    const parsedCharacter = parseInt(splitString[i]);
+
+    if (parsedCharacter) {
+      glassesOfWater += parsedCharacter;
+    }
+  }
+
+  let glass = "copo";
+
+  if (glassesOfWater > 1) {
+    glass = "copos";
+  }
+
+  return `${glassesOfWater} ${glass} de água`;
+};
+
+module.exports = {
+  sum,
+  myRemove,
+  myFizzBuzz,
+  encode,
+  decode,
+  techList,
+  hydrate,
+};
