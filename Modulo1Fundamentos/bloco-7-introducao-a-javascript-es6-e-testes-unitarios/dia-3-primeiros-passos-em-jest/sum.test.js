@@ -1,5 +1,12 @@
 const { describe, it, expect } = require("@jest/globals");
-const { sum, myRemove, myFizzBuzz, encode, decode } = require("./sum.js");
+const {
+  sum,
+  myRemove,
+  myFizzBuzz,
+  encode,
+  decode,
+  techList,
+} = require("./sum.js");
 
 // Item 1
 describe("Item 1", () => {
