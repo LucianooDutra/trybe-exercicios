@@ -85,4 +85,34 @@ const techList = (arrayTechnologies, name) => {
   return technologyList;
 };
 
-module.exports = { sum, myRemove, myFizzBuzz, encode, decode, techList };
+// Item 6
+const hydrate = (string) => {
+  const splitString = string.split("");
+  let glassesOfWater = 0;
+
+  for (let i = 0; i < splitString.length; i += 1) {
+    const parsedCharacter = parseInt(splitString[i]);
+
+    if (parsedCharacter) {
+      glassesOfWater += parsedCharacter;
+    }
+  }
+
+  let glass = "copo";
+
+  if (glassesOfWater > 1) {
+    glass = "copos";
+  }
+
+  return `${glassesOfWater} ${glass} de água`;
+};
+
+module.exports = {
+  sum,
+  myRemove,
+  myFizzBuzz,
+  encode,
+  decode,
+  techList,
+  hydrate,
+};

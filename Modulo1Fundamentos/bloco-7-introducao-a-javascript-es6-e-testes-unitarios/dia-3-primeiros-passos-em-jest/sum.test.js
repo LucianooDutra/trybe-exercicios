@@ -6,6 +6,7 @@ const {
   encode,
   decode,
   techList,
+  hydrate,
 } = require("./sum.js");
 
 // Item 1
