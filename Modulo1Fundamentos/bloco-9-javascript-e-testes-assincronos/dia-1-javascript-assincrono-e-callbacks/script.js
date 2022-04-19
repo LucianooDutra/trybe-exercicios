@@ -171,19 +171,70 @@
 
 // 7 - Escreva um teste que verifique a chamada da callback de uma função uppercase , que transforma as letras de uma palavra em letras maiúsculas. Lembre-se de ter cuidado com os falso-positivos em testes assíncronos.
 
-const uppercase = (str, callback) => {
-    setTimeout(() => {
-      callback(str.toUpperCase());
-    }, 500);
-  };
+// const uppercase = (str, callback) => {
+//     setTimeout(() => {
+//       callback(str.toUpperCase());
+//     }, 500);
+//   };
 
-  it('testar a palavra "novo" pra sair "NOVO"', (done) => {
-      uppercase('novo', (str) => {
-          try {
-              expect(str).toBe('NOVO');
-              done();
-          } catch (error) {
-              done(error);
-          }
-      });
-  });
+//   it('testar a palavra "novo" pra sair "NOVO"', (done) => {
+//       uppercase('novo', (str) => {
+//           try {
+//               expect(str).toBe('NOVO');
+//               done();
+//           } catch (error) {
+//               done(error);
+//           }
+//       });
+//   });
+
+
+//   8 - Para o próximo exercício, você vai sentir na pele o primeiro dia de um treinador Pokémon! No laboratório do Professor Carvalho, você é informado de que existem três pokémons disponíveis: Bulbasaur, Charmander e Squirtle. Complete a chamada da função getPokemonDetails de modo que ela imprima no console os detalhes do pokémon que você escolheu. PS: é possível que o sistema do Professor Carvalho apresente erros caso o pokémon não exista no banco de dados, então não se esqueça de tratá-los também, combinado?
+
+const pokemons = [
+    {
+      name: 'Bulbasaur',
+      type: 'Grass',
+      ability: 'Razor Leaf',
+    },
+    {
+      name: 'Charmander',
+      type: 'Fire',
+      ability: 'Ember',
+    },
+    {
+      name: 'Squirtle',
+      type: 'Water',
+      ability: 'Water Gun',
+    },
+  ];
+  
+  function getPokemonDetails(filter, callback) {
+    setTimeout(() => {
+      if (pokemons.find(filter) === undefined) {
+        return callback(new Error('Não temos esse pokemon para você :('), null);
+      }
+      const pokemon = pokemons.find(filter);
+  
+      const { name, type, ability } = pokemon;
+  
+      const messageFromProfOak = `Olá, seu pokemon é o ${name}, o tipo dele é ${type} e a habilidade principal dele é ${ability}`;
+  
+      callback(null, messageFromProfOak);
+    }, 2000);
+  }
+  
+  getPokemonDetails(
+    (pokemon) => pokemon.name === 'Bulbasaur',
+    (error, message) => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(message);
+      }
+    }
+  );
+  
+  module.exports = {
+    getPokemonDetails,
+  };
