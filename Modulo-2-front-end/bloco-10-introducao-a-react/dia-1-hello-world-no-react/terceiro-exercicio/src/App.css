@@ -1,0 +1,26 @@
+body {
+  background-color: rgb(138, 223, 159);
+  color: rgb(24, 59, 34);
+  text-align: center;
+  /* display: flex; */
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  background-color: rgb(24, 59, 34);
+  color: rgb(184, 233, 178);
+}
+
+.content {
+  line-height: 8px;
+  padding-top: 10px;
+  /* padding-bottom: 10px; */
+}
+
+.footer {
+  padding-top: 70px;
+}
