@@ -1,59 +1,56 @@
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 main {
-  background-color: rgb(169, 250, 169);
+  background-image: url(../pokemon2.jpg);
+  min-height: 100vh;
+  background-size: cover;
   padding-left: 100px;
+  padding-right: 100px;
   display: flex;
-  flex-direction: row;
-}
-
-.divprimeira{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.section {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.pokemon {
-  display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  /* flex: 1 1 0; */
-  min-width: 180px;
-  margin: 10px 10px;
-  border: 3px rgb(39, 109, 44) solid;
-  border-radius: 10px;
+  color: rgb(26, 21, 95);
 }
 
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+h1 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.div {
+  padding-top: 70px;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .pokemon {
+  min-width: 160px;
+  min-height: 200px;
+  margin: 10px 10px;
+  border: 3px rgb(26, 21, 95) solid;
+  border-radius: 10px;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   align-items: center;
   justify-content: space-around;
-  flex: 1 1 0;
-  min-width: 25%;
-  margin: 10px 10px;
-  border: 1px gray solid;
-  border-radius: 10px;
 }
 
-.pokedex {
+.pokemon:hover {
+  color: rgb(109, 76, 36);
+  font-size: 130%;
+  border: 4px rgb(173, 106, 23) solid;
+  box-shadow: 10px 5px 15px rgb(214, 85, 34);
+  cursor: pointer;
+}
+
+.nomes {
+  min-width: 160px;
+  min-height: 60px;
+  text-align: Center;
   display: flex;
-  flex-wrap: wrap;
-  margin: 10px 10px;
-} */
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
