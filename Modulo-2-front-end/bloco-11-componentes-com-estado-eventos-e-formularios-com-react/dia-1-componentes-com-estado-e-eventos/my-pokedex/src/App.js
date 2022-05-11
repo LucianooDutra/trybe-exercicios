@@ -6,7 +6,7 @@ import pokemons from "./data";
 
 class App extends React.Component {
   render() {
-    console.log(this);
+    // console.log(this);
     return (
       <main>
         <h1> Pokedex </h1>
