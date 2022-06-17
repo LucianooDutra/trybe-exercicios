@@ -1,20 +1,20 @@
 // ARQUIVO UTILIZADO COMO EXEMPLO.
-console.log(Redux);
+// console.log(Redux);
 
 const INCREMENTO = "INCREMENTO";
 const DECREMENTO = "DECREMENTO";
 
 // ====== Definir Reducer e Estado Inicial ==========
 const INCREMENTAR = () => ({
-  type: INCREMENTO
+  type: INCREMENTO,
 });
 
 const DECREMENTAR = () => ({
-  type: DECREMENTO
+  type: DECREMENTO,
 });
 
 const initialState = {
-  valor: 0
+  valor: 0,
 };
 const reducer = (state = initialState, action) => {
   switch (action.type) {
