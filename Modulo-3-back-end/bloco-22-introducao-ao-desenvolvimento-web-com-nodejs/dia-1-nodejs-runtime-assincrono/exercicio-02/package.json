@@ -1,0 +1,13 @@
+{
+  "name": "exercicio-02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "simpson.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node simpson.js"
+  },
+  "keywords": [],
+  "author": "luciano dutra",
+  "license": "ISC"
+}
