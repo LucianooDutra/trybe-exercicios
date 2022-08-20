@@ -19,11 +19,8 @@
 // const fs = require('fs').promises;
 
 // async function getSimpsonById(id) {
-//   const fileContent = await fs
-//     .readFile('./simpsons.json', 'utf-8');
-  
+//   const fileContent = await fs.readFile('./simpsons.json', 'utf-8');
 //   const simpsons = JSON.parse(fileContent);
-
 //   const chosenSimpson = simpsons.find((simpson) => Number(simpson.id) === id);
 
 //   if (!chosenSimpson) {
@@ -55,11 +52,8 @@
 // const fs = require('fs').promises;
 
 // async function filterSimpsons() {
-//   const fileContent = await fs
-//     .readFile('./simpsons.json', 'utf-8');
-  
+//   const fileContent = await fs.readFile('./simpsons.json', 'utf-8');
 //   const simpsons = JSON.parse(fileContent);
-
 //   const newArray = simpsons.filter((simpson) => simpson.id !== '10' && simpson.id !== '6');
 
 //   await fs.writeFile('./simpsons.json', JSON.stringify(newArray));
@@ -78,9 +72,7 @@
 // const fs = require('fs').promises;
 
 // async function createSimpsonsFamily() {
-//   const fileContent = await fs
-//     .readFile('./simpsons.json', 'utf-8');
-
+//   const fileContent = await fs.readFile('./simpsons.json', 'utf-8');
 //   const simpsons = JSON.parse(fileContent);
 
 //   const familyIds = [1, 2, 3, 4];
@@ -103,9 +95,7 @@
 // const fs = require('fs').promises;
 
 // async function addNelsonToFamily() {
-//   const fileContent = await fs
-//     .readFile('./simpsonsFamily.json', 'utf-8');
-
+//   const fileContent = await fs.readFile('./simpsonsFamily.json', 'utf-8');
 //   const simpsonsFamily = JSON.parse(fileContent);
 
 //   simpsonsFamily.push({"id":"8","name":"Nelson Muntz"})
@@ -124,31 +114,28 @@
 // Crie uma função que substitua o personagem Nelson Muntz pela personagem Maggie Simpson no arquivo simpsonFamily.json.
 
 
-const fs = require('fs').promises;
+// const fs = require('fs').promises;
 
-async function replaceNelson() {
-  const fileContent = await fs
-    .readFile('./simpsonsFamily.json', 'utf-8');
+// async function replaceNelson() {
+//   const fileContent = await fs.readFile('./simpsonsFamily.json', 'utf-8');
+//   const simpsons = JSON.parse(fileContent);
 
-  const simpsons = JSON.parse(fileContent);
+//   // Filtramos o array para remover o personagem Nelson
+//   const simpsonsWithoutNelson = simpsons.filter((simpson) => simpson.id !== '8');
 
-  // Filtramos o array para remover o personagem Nelson
-  const simpsonsWithoutNelson = simpsons.filter((simpson) => simpson.id !== '8');
+//   // Criamos um novo Array contendo a personagem Maggie
+//   const simpsonsWithMaggie = simpsonsWithoutNelson.concat([{ id: '15', name: 'Maggie Simpson' }]);
+//   // com spread seria assim: 
+//   // const simpsonsWithMaggie = [ ...simpsonsWithoutNelson, simpsonsWithMaggie ]
 
-  // Criamos um novo Array contendo a personagem Maggie
-  const simpsonsWithMaggie = simpsonsWithoutNelson
-    .concat([{ id: '15', name: 'Maggie Simpson' }]);
-  // com spread seria assim: 
-  // const simpsonsWithMaggie = [ ...simpsonsWithoutNelson, simpsonsWithMaggie ]
+//   // Escrevemos o novo array no arquivo e retornamos a promise de escrita
+//   return fs.writeFile('./simpsonsFamily.json', JSON.stringify(simpsonsWithMaggie));
+// }
 
-  // Escrevemos o novo array no arquivo e retornamos a promise de escrita
-  return fs.writeFile('./simpsonsFamily.json', JSON.stringify(simpsonsWithMaggie));
-}
+// function main() {
+//   replaceNelson();
+//   // caso queira esperar a resolução, use o `await` ou `.then` como fizemos anteriormente
+// }
 
-function main() {
-  replaceNelson();
-  // caso queira esperar a resolução, use o `await` ou `.then` como fizemos anteriormente
-}
-
-main();
+// main();
 
