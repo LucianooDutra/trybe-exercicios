@@ -5,6 +5,6 @@ const app = express();
 
 app.use(express.json());
 
-app.use(activities);
+app.use('/activities', activities);
 
 module.exports = app;
