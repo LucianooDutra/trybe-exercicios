@@ -17,7 +17,7 @@ const getActivities = async () => {
 	return arrayData;
 };
 
-const insertBlogPostFile = async (post) => {
+const insertActiveFile = async (post) => {
 	try {
 		const arrayPosts = await readData();
 		post = {
@@ -35,5 +35,5 @@ const insertBlogPostFile = async (post) => {
 
 module.exports = {
   getActivities,
-  insertBlogPostFile,
+  insertActiveFile,
 };
