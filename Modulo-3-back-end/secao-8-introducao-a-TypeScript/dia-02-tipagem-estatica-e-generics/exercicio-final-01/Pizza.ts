@@ -44,6 +44,8 @@ interface pizzaDoce {
   slices: 4;
 };
 
+// /////////////////////////////
+
 const calabresa2: pizzaComum = {
   flavor: "Calabresa",
   slices: 6
@@ -62,6 +64,8 @@ const pepperoni2: pizzaComum = {
 }
 console.log(pepperoni2);
 
+// /////////////////////////////
+
 const marguerita2: pizzaVegetariana = {
   flavor: "Marguerita",
   slices: 8
@@ -79,6 +83,8 @@ const cogumelo2: pizzaVegetariana = {
   slices: 4
 }
 console.log(cogumelo2);
+
+// /////////////////////////////
 
 const nutela2: pizzaDoce = {
   flavor: "Nutela",
