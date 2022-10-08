@@ -1,5 +1,6 @@
-import { Pool, ResultSetHeader } from 'mysql2/promise';
+import { Pool, ResultSetHeader, RowDataPacket } from 'mysql2/promise';
 import Book from '../interfaces/book.interface';
+import IUser from '../interfaces/user.interface';
 
 export default class BookModel {
   public connection: Pool;
@@ -10,7 +11,7 @@ export default class BookModel {
 
   public async getAll(): Promise<Book[]> {
     const result = await this.connection
-      .execute('SELECT * FROM books');
+      .execute<RowDataPacket[]>('SELECT * FROM books');
     const [rows] = result;
     return rows as Book[];
   }
@@ -58,5 +59,10 @@ export default class BookModel {
       `${query} ${queryUpdate} WHERE id=?`,
       [...queryValues, id]
     );
+  }
+
+  public async getByEmail(email: string): Promise<IUser> {
+    const [[user]] = await this.connection.execute<(IUser & RowDataPacket)[]>(`SELECT * FROM users WHERE email = ?`, [email]);
+    return user as IUser;
   }
 }

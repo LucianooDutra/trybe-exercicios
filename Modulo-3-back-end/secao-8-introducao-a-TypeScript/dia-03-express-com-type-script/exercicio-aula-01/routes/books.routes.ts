@@ -1,10 +1,14 @@
 import { Router } from 'express';
 import BooksController from '../controllers/books.controller';
+import LoginController from '../controllers/LoginController';
 import { validationBook, validatePartialBook } from '../middlewares/books.middleware';
 
 const router = Router();
 
 const booksController = new BooksController();
+const loginController = new LoginController();
+
+router.post('/login', loginController.login);
 
 router.get('/books', booksController.getAll);
 router.get('/books/:id', booksController.getById);
