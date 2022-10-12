@@ -60,7 +60,6 @@ class Professor extends Person2 implements Employee {
   _salary: number;
   _admissionDate: Date;
 
-
   constructor(name: string, birthDate: Date, salary: number, subject: Subject) {
     super(name, birthDate);
     this._subject = subject;
