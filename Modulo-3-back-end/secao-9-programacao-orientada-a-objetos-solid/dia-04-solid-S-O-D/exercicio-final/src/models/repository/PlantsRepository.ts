@@ -15,16 +15,18 @@ export default class PlantRepository {
 
   public static async update(newPlant: Plant, plantId:number): Promise<IPlant> {
     await Connection.execute(
-      'UPDATE solid_example.plants SET name=? specie=? WHERE id=?', [newPlant.name, newPlant.specie, plantId]);
+      'UPDATE solid_example.plants'
+      + 'SET name=? specie=? WHERE id=?', [newPlant.name, newPlant.specie, plantId],
+    );
 
-    const getId = await this.getById(newPlant.id)
+    const getId = await this.getById(newPlant.id);
 
     return getId;
   }
 
   public static async getAll(): Promise<IPlant[]> {
     const result = await Connection.execute(
-      'SELECT * FROM solid_example.plants', ''
+      'SELECT * FROM solid_example.plants', '',
     );
     const [rows] = result;
     return rows as IPlant[];
@@ -42,7 +44,7 @@ export default class PlantRepository {
 
   public static async delete(plantId: number): Promise<void> {
     await Connection.execute(
-      'DELETE FROM solid_example.plants WHERE id=?', [plantId]
+      'DELETE FROM solid_example.plants WHERE id=?', [plantId],
     );
   }
 }

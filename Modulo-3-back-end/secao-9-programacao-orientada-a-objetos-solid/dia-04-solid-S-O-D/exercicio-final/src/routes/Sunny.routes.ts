@@ -1,5 +1,4 @@
-import { Router } from 'express';
-import { Request, Response } from 'express';
+import { Request, Response, Router } from 'express';
 import Plants from '../Plants';
 
 const router = Router();

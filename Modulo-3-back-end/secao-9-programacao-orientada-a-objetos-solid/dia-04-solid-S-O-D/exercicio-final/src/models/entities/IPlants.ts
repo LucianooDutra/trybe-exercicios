@@ -1,5 +1,5 @@
 export default interface IPlant {
-  id?: number;
-  name: string;
-  specie: string;
+  id?: number,
+  name: string,
+  specie: string,
 }
