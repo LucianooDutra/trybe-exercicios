@@ -39,8 +39,8 @@ export default class PlantController {
       const { id } = req.params;
       const plantId = Number(id);
       const plant = await PlantService.getById(plantId);
-      if(!plant) {
-        res.status(404).json({ message: 'Plant not Found!' })
+      if (!plant) {
+        res.status(404).json({ message: 'Plant not Found!' });
       }
       res.status(200).json(plant);
     } catch (error) {
@@ -58,5 +58,4 @@ export default class PlantController {
       res.status(404).json({ message: error });
     }
   }
-
 }

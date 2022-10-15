@@ -6,7 +6,7 @@ class Connection {
   constructor() {
     Connection.connection = mysql.createPool({
       // 'localhost'
-      // host: 'mysqldb',      Nome do meu BD se estiver usando docker
+      // host: 'mysqldb',      Nome do meu services: BD se estiver usando docker
       host: 'localhost',
       // se não usar docker e rodar na minha propria maquina será localhost
       user: 'root',
