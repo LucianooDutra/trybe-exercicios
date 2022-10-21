@@ -28,7 +28,7 @@ export default class PlantController {
   public async getAll(_req: Request, res: Response): Promise<void> {
     try {
       const plants = await PlantService.getAll();
-      res.status(201).json(plants);
+      res.status(200).json(plants);
     } catch (error) {
       res.status(400).json({ message: error });
     }

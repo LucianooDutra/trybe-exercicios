@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "start": "npm run build && node ./dist/index.js",
+    "dev": "tsnd ./src/index.ts",
+    "build": "tsc"
   },
   "keywords": [
     "typescript",
@@ -28,9 +31,12 @@
     "typescript": "4.4.2"
   },
   "dependencies": {
+    "@types/restify-errors": "^4.3.4",
     "body-parser": "1.19.0",
     "eslint-config-trybe-backend": "1.0.4",
     "express": "4.17.1",
-    "mysql2": "^2.3.3"
+    "express-async-errors": "^3.1.1",
+    "mysql2": "^2.3.3",
+    "restify-errors": "^8.0.2"
   }
 }
