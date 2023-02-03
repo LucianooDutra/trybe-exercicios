@@ -1,5 +1,7 @@
 from parsel import Selector
 import requests
+# requests = faz a requisição da minha pagina
+# parsel.Selector faz a transformação de arquivo HTML pra texto
 
 URL_BASE = "http://books.toscrape.com/catalogue/"
 
